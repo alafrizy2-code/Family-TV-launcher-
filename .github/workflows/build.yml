@@ -17,10 +17,9 @@ jobs:
           ANDROID_HOME: /usr/local/lib/android/sdk
         run: |
           echo "sdk.dir=$ANDROID_HOME" > local.properties
-          ls -la
           gradle assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Family-TV-APK
+          name: Family-TV-APK-B866F
           path: app/build/outputs/apk/debug/*.apk
