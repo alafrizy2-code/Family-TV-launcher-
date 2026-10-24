@@ -18,7 +18,7 @@ jobs:
         run: |
           pwd
           ls -la
-          if [ -d "Family-TV-launcher-" ]; then cd Family-TV-launcher-; fi
+          if [ -d "Family-TV-launcher-" ]; then cd Family-TV-launcher; fi
           ls -la
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           gradle assembleDebug --stacktrace
