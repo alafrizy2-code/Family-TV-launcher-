@@ -15,12 +15,12 @@ jobs:
       - name: Build APK
         env:
           ANDROID_HOME: /usr/local/lib/android/sdk
-          ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         run: |
+          cd Family-TV-launcher-
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           gradle assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Family-TV-APK
-          path: app/build/outputs/apk/debug/*.apk
+          path: Family-TV-launcher-/app/build/outputs/apk/debug/*.apk
